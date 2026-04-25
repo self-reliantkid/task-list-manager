@@ -38,6 +38,12 @@ def get_current_date():
 
 
 
+def gen_id(num):
+    num = f"{'0'*(3-len(str(num)))}{num}"
+    return num
+
+
+
 def clear_screen(n=0.8):
     """
     Clear the terminal
