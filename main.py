@@ -1,10 +1,45 @@
 import time
 import sys
 from utils import clear_screen, delay
-from task_system import empty_list, add_task, view_tasks, mark_complete, change_priority, delete_task
+from storage import load_records, save_records
+from task_system import date, empty_list, add_task, view_tasks, mark_complete, change_priority, delete_task, clear_tasks
 
 
-tasks_database = empty_list({})
+tasks_database = load_records()
+
+
+def check_records(data):
+    if data[date]:
+        data = records_menu(data)
+        main_menu()
+    else:
+        main_menu()
+        
+
+
+def records_menu(rec):
+    clear_screen()
+    while True:
+        print("Saved records found! Do you want to retrieve?")
+        print(" 1. Yes")
+        print(" 2. No")
+
+        try:
+            user_choice = int(input("\nYour choice: "))
+
+            if user_choice not in range(1, 3):
+                clear_screen()
+                print("Option not in menu. Try again!")
+            else:
+                if user_choice == 1:
+                    return rec
+                elif user_choice == 2:
+                    rec = empty_list(rec)
+                    return rec
+        except ValueError:
+            clear_screen()
+            print("Invalid input! Try again!")
+
 
 
 def main_menu():
@@ -78,7 +113,7 @@ def manage_tasks_menu():
                 elif user_choice == 2:
                     delete_task_menu(tasks_database)
                 elif user_choice == 3:
-                    clear_tasks_menu(tasks_database)
+                    clear_tasks(tasks_database)
                 elif user_choice == 4:
                     main_menu()
                 elif user_choice == 5:
@@ -143,22 +178,10 @@ def delete_task_menu(data):
     id = input("Enter task ID: ")
     data = delete_task(id, data)
 
-    # clear_screen()
-    # print("Task successfully deleted!")
-    # time.sleep(0.8)
-
-
-
-def clear_tasks_menu(data):
-    data = empty_list({})
-
-    clear_screen()
-    print("All tasks successfully cleared!")
-    time.sleep(0.8)
-
 
 
 def exit():
+    save_records(tasks_database)
     clear_screen(1.25)
     print("Quitting program", end="")
     delay()
@@ -168,4 +191,4 @@ def exit():
     
 
 if __name__ == "__main__":
-    main_menu()
+    check_records(tasks_database)

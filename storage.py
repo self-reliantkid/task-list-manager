@@ -1,4 +1,5 @@
 import json
+from task_system import date
 
 
 def save_records(info):
@@ -10,8 +11,8 @@ def save_records(info):
 def load_records():
     try:
         with open("tasks.json", "r") as file:
-            return json.load(file) or {}
+            return json.load(file) or {date: {}}
     except FileNotFoundError:
-        return {}
+        return {date: {}}
     except json.JSONDecodeError:
-        return {}
+        return {date: {}}

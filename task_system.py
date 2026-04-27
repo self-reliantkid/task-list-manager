@@ -1,4 +1,5 @@
-from utils import get_current_date, gen_id
+import time
+from utils import get_current_date, gen_id,  clear_screen
 
 
 date = get_current_date()
@@ -31,6 +32,7 @@ def view_tasks(tasks_list):
 
     if not tasks_list[date]:
         print("No available tasks to display!")
+        time.sleep(0.5)
 
     else:    
         for task in tasks_list[date]:
@@ -46,6 +48,10 @@ def mark_complete(id, tasks_list):
     if id not in tasks_list[date]:
         print("Task ID not found!")
     else:
+        clear_screen()
+        print("Task marked complete!")
+        time.sleep(0.8)
+
         tasks_list[date][id][2] = "completed"
         return tasks_list
 
@@ -55,6 +61,10 @@ def change_priority(id, priority, tasks_list):
     if id not in tasks_list[date]:
         print("Task ID not found!")
     else:
+        clear_screen()
+        print("Task priority updated!")
+        time.sleep(0.8)
+
         tasks_list[date][id][1] = priority
         return tasks_list
 
@@ -64,5 +74,19 @@ def delete_task(id, tasks_list):
     if id not in tasks_list[date]:
         print("Task ID not found!")
     else:
+        clear_screen()
+        print("Task successfully deleted!")
+        time.sleep(0.8)
+
         tasks_list[date].pop(id, None)
         return tasks_list
+    
+
+
+def clear_tasks(tasks_list):
+    clear_screen()
+    print("All tasks successfully cleared!")
+    time.sleep(0.8)
+
+    tasks_list[date].clear()
+    return tasks_list
