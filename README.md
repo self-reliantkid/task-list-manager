@@ -1,6 +1,22 @@
 # Task List Manager
 This is a simple CLI app made in Python to help users add, view and manage their tasks to boost productivity. Tasks can be added together with priority levels and organized into daily format or project list.
 
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat)
+![Last Commit](https://img.shields.io/github/last-commit/self-reliantkid/task-list-manager?style=flat)
+
+
+## Table of Contents
+- [Features](#features)
+- [Demo](#demo)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Roadmap](#roadmap)
+- [Tech Stack](#tech-stack)
+- [Author](#author)
+- [License](#license)
+
 
 ## Features
 - Add tasks and view tasks
@@ -9,14 +25,8 @@ This is a simple CLI app made in Python to help users add, view and manage their
 - Local storage of tasks
 
 
-## File Structure
-```
-task-list-manager/
-├── main.py             # main app (menus)
-├── storage.py          # storage system
-├── task_system.py      # tasks logic
-└── utils.py            # utility functions
-```
+## Demo
+![Demo](assets/demo.gif)
 
 
 ## Getting Started
@@ -41,6 +51,16 @@ python3 main.py
 ```
 
 
+## Project Structure
+```
+task-list-manager/
+├── main.py             # main app (menus)
+├── storage.py          # storage system
+├── task_system.py      # tasks logic
+└── utils.py            # utility functions
+```
+
+
 ## Roadmap
 - Organize tasks in daily list format or sections
 - Sorting of tasks based on preference
@@ -58,4 +78,4 @@ python3 main.py
 
 
 ## License
-MIT
+This project is licensed under the [MIT License](LICENSE).
