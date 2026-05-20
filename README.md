@@ -5,6 +5,7 @@ This is a simple CLI app made in Python to help users add, view and manage their
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat)
 ![Last Commit](https://img.shields.io/github/last-commit/self-reliantkid/task-list-manager?style=flat)
+![CI](https://github.com/self-reliantkid/task-list-manager/actions/workflows/ci.yml/badge.svg)
 
 
 ## Table of Contents
@@ -32,7 +33,7 @@ This is a simple CLI app made in Python to help users add, view and manage their
 
 ## Getting Started
 ### Prerequisities
-- Python 3.8 or higher
+- Python 3.11 or higher
 - Git 
 
 ### Installation
@@ -65,6 +66,8 @@ python3 main.py
 ## Project Structure
 ```
 task-list-manager/
+├── assets
+│   └── demo.gif
 ├── main.py             # main app (menus)
 ├── storage.py          # storage system
 ├── task_system.py      # tasks logic
@@ -79,13 +82,13 @@ task-list-manager/
 
 
 ## Tech Stack
-- Language: Python
-- Interface: Command Line
+- **Language:** Python
+- **Interface:** Command Line
 
 
 ## Author
-- Github: [@self-reliantkid](https://www.github.com/self-reliantkid)
-- LinkedIn: [Senanu Folikumah](https://www.linkedin.com/in/senanu-folikumah)
+- **Github:** [@self-reliantkid](https://www.github.com/self-reliantkid)
+- **LinkedIn:** [Senanu Folikumah](https://www.linkedin.com/in/senanu-folikumah)
 
 
 ## License
