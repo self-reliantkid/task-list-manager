@@ -11,6 +11,7 @@ This is a simple CLI app made in Python to help users add, view and manage their
 - [Features](#features)
 - [Demo](#demo)
 - [Getting Started](#getting-started)
+- [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Roadmap](#roadmap)
 - [Tech Stack](#tech-stack)
@@ -49,6 +50,16 @@ python main.py
 # MacOS/Linux
 python3 main.py
 ```
+
+
+## Usage
+
+| Option | Description |
+|--------|-------------|
+| 1. Add task | Create a new task with priority |
+| 2. View task | Displays all added tasks with priority and completion status |
+| 3. Manage tasks | Edit tasks, delete tasks and clear entire task list |
+| 4. Exit | Quit the app |
 
 
 ## Project Structure
