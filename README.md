@@ -37,21 +37,24 @@ This is a simple CLI app made in Python to help users add, view and manage their
 - Git 
 
 ### Installation
+**Clone the repo**
 ```
-# Clone the repo
-git clone https://github.com/self-reliantkid/task-list-manager
-
-# Navigate to project folder
-cd task-list-manager
-
-# Run the app
-# Windows
-python main.py
-
-# MacOS/Linux
-python3 main.py
+git clone https://github.com/self-reliantkid/task-list-manager.git
 ```
 
+**Navigate to project folder**
+```
+cd student-grading-system
+```
+
+**Run the app**
+```
+python main.py      #Windows
+```
+
+```
+python3 main.py     #MacOS/Linux
+```
 
 ## Usage
 
@@ -76,9 +79,9 @@ task-list-manager/
 
 
 ## Roadmap
-- Organize tasks in daily list format or sections
-- Sorting of tasks based on preference
-- Time frames attached to tasks
+- [ ] Organize tasks in daily list format or sections
+- [ ] Sorting of tasks based on preference
+- [ ] Time frames attached to tasks
 
 
 ## Tech Stack
