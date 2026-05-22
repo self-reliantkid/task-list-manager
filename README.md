@@ -44,7 +44,7 @@ git clone https://github.com/self-reliantkid/task-list-manager.git
 
 **Navigate to project folder**
 ```
-cd student-grading-system
+cd task-list-manager
 ```
 
 **Run the app**
